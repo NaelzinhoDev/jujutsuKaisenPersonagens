@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Character UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+
+    <div class="app">
+      <!-- INFO (SECTION REAL) -->
+      <section class="info">
+        <h1 id="name">Satoru Gojo</h1>
+        <p class="role">Feiticeiro de Nivel Especial</p>
+
+        <p id="desc">
+          Satoru Gojo é um dos feiticeiros mais poderosos, dominando o infinito
+          e técnicas únicas.
+        </p>
+      </section>
+
+      <!-- CARD -->
+      <div class="cardWrapper">
+        <button class="arrow left" id="prev">❮</button>
+
+        <div class="card" id="card">
+          <img src="Assets/Satoru Gojo.jfif" id="image" />
+          <h2 class="title">Satoru Gojo</h2>
+        </div>
+
+        <button class="arrow right" id="next">❯</button>
+      </div>
+    </div>
+    <div class="watermark">naeldev</div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

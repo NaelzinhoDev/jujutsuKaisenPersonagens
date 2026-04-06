@@ -1,0 +1,235 @@
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+
+  height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(168, 85, 247, 0.3),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(236, 72, 153, 0.2),
+      transparent 40%
+    ),
+    #020617;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LAYOUT PRINCIPAL */
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* INFO SECTION */
+.info {
+  max-width: 350px;
+
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 42px;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+.role {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2;
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 10px 0 20px;
+}
+
+#desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* CARD AREA */
+.cardWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* CARD */
+.card {
+  width: 300px;
+  height: 400px;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  transform-style: preserve-3d;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.2s ease;
+}
+
+/* EFEITO BRILHO */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+
+  pointer-events: none;
+}
+
+.card::after {
+  box-shadow: 0 0 50px rgba(168, 85, 247, 0.6);
+}
+
+/* IMG */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TITLE */
+.title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 22px;
+}
+
+/* SETAS */
+.arrow {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  color: #a855f7;
+  font-size: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+
+  box-shadow:
+    0 0 20px #a855f7,
+    0 0 40px rgba(168, 85, 247, 0.8);
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+
+  opacity: 0.6;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* PARTICLES */
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .info {
+    text-align: center;
+  }
+}
+
+.watermark {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.2);
+
+  pointer-events: none; /* não atrapalha clique */
+
+  z-index: 999;
+}
