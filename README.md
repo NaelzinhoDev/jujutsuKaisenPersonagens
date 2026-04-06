@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://naelzinhodev.github.io/jujutsuKaisenPersonagens/">
+  <a href="npx plugins add vercel/vercel-plugin">
     <img src="https://img.shields.io/badge/🔗_Acessar_Projeto-000?style=for-the-badge">
   </a>
 </p>
