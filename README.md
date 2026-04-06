@@ -1,7 +1,7 @@
 # 🌀 Jujutsu Kaisen Personagens
 
 <p align="center">
-  <img src="<img width="2048" height="767" alt="banner cibernético com personagens de anime" src="https://github.com/user-attachments/assets/4d50e419-2aad-46e1-b768-21fcbe81b547" />
+  <img src="[<img width="2048" height="767" alt="banner cibernético com personagens de anime" src="https://github.com/user-attachments/assets/4d50e419-2aad-46e1-b768-21fcbe81b547"](https://chatgpt.com/s/m_69d42dcfe7608191b74d8114d95a660e) />
 ">
 </p>
 
